@@ -7,84 +7,118 @@
     <title>Kiran | Backend Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+        }
+    </style>
 </head>
 
-<body class="bg-gray-900 text-gray-100 font-sans">
+<body class="bg-[#0b0f1a] text-slate-300 selection:bg-blue-500/30">
 
-    <header class="py-24 px-6 text-center bg-gradient-to-b from-gray-800 to-gray-900 border-b border-gray-700">
-        <h1 class="text-6xl font-black text-white tracking-tighter mb-4">KIRAN</h1>
-        <p class="text-2xl text-blue-400 font-medium tracking-wide uppercase">Backend Developer</p>
-        <div class="mt-8 flex justify-center space-x-6 text-3xl text-gray-400">
-            <a href="https://github.com/kirany2522" target="_blank" class="hover:text-white transition"><i
-                    class="fab fa-github"></i></a>
-            <a href="#" class="hover:text-white transition"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:coekiran800024@gmail.com" class="hover:text-white transition"><i
-                    class="fas fa-envelope"></i></a>
+    <nav class="sticky top-0 z-50 glass px-6 py-4">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <div class="text-2xl font-black text-white tracking-tighter italic">KIRAN<span
+                    class="text-blue-500">_</span></div>
+            <div class="flex space-x-6 text-sm font-bold uppercase tracking-widest">
+                <a href="https://github.com/kirany2522" target="_blank"
+                    class="hover:text-blue-400 transition-colors">GitHub</a>
+                <a href="mailto:coekiran800024@gmail.com"
+                    class="text-blue-500 hover:text-white transition-colors underline decoration-2 underline-offset-4">Hire
+                    Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative py-32 px-6 text-center hero-gradient">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-7xl md:text-9xl font-extrabold text-white mb-6 tracking-tighter">
+                BACK<span class="text-blue-500 font-light italic">END</span>
+            </h1>
+            <p class="text-2xl text-slate-400 font-light mb-10 max-w-2xl mx-auto leading-relaxed">
+                Building the core of web applications with <span class="text-white font-semibold">Node.js</span>, <span
+                    class="text-white font-semibold">PHP</span>, and <span
+                    class="text-white font-semibold">Python</span>.
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="mailto:coekiran800024@gmail.com"
+                    class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full font-bold transition-all shadow-lg shadow-blue-500/20">Let's
+                    Talk</a>
+            </div>
         </div>
     </header>
 
-    <main class="max-w-4xl mx-auto py-16 px-6">
-
-        <section class="mb-20">
-            <h2 class="text-3xl font-bold text-white mb-6 border-l-4 border-blue-500 pl-4">About Me</h2>
-            <p class="text-xl text-gray-400 leading-relaxed">
-                I specialize in building robust server-side logic and scalable APIs. Proficient in <span
-                    class="text-blue-400">Node.js</span>, <span class="text-blue-400">PHP</span>, and <span
-                    class="text-blue-400">Python</span>.
-            </p>
-        </section>
-
-        <section class="mb-20">
-            <h2 class="text-3xl font-bold text-white mb-8 border-l-4 border-blue-500 pl-4">Technical Stack</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div
-                    class="bg-gray-800 p-4 rounded-lg border border-gray-700 text-center hover:border-blue-500 transition cursor-default">
-                    Node.js</div>
-                <div
-                    class="bg-gray-800 p-4 rounded-lg border border-gray-700 text-center hover:border-blue-500 transition cursor-default">
-                    PHP</div>
-                <div
-                    class="bg-gray-800 p-4 rounded-lg border border-gray-700 text-center hover:border-blue-500 transition cursor-default">
-                    Python</div>
-                <div
-                    class="bg-gray-800 p-4 rounded-lg border border-gray-700 text-center hover:border-blue-500 transition cursor-default">
-                    MongoDB</div>
-                <div
-                    class="bg-gray-800 p-4 rounded-lg border border-gray-700 text-center hover:border-blue-500 transition cursor-default">
-                    Express.js</div>
-                <div
-                    class="bg-gray-800 p-4 rounded-lg border border-gray-700 text-center hover:border-blue-500 transition cursor-default">
-                    MySQL</div>
-                <div
-                    class="bg-gray-800 p-4 rounded-lg border border-gray-700 text-center hover:border-blue-500 transition cursor-default">
-                    REST APIs</div>
-                <div
-                    class="bg-gray-800 p-4 rounded-lg border border-gray-700 text-center hover:border-blue-500 transition cursor-default">
-                    Git & GitHub</div>
+    <section class="py-24 px-6 max-w-5xl mx-auto">
+        <h2 class="text-sm font-black text-blue-500 uppercase tracking-[0.3em] mb-12 text-center italic">Technical
+            Arsenal</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="glass p-8 rounded-3xl group hover:border-blue-500/50 transition">
+                <i class="fab fa-node-js text-5xl text-blue-500 mb-6 block"></i>
+                <h3
+                    class="text-xl font-bold text-white mb-2 italic underline underline-offset-8 decoration-blue-500/30">
+                    Node.js</h3>
+                <p class="text-sm text-slate-500 leading-relaxed italic">Fast, scalable server-side environments using
+                    Express.js and real-time processing.</p>
             </div>
-        </section>
-
-        <section>
-            <h2 class="text-3xl font-bold text-white mb-8 border-l-4 border-blue-500 pl-4">Key Projects</h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div
-                    class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:shadow-2xl hover:shadow-blue-500/10 transition">
-                    <h3 class="text-xl font-bold text-blue-400">Task Manager API</h3>
-                    <p class="text-gray-500 mt-2 mb-4">A secure backend system built with Node.js and Express for
-                        managing tasks.</p>
-                    <a href="#" class="text-sm font-bold text-white uppercase tracking-widest hover:text-blue-400">View
-                        Project →</a>
-                </div>
-                <div
-                    class="bg-gray-800 p-6 rounded-xl border border-gray-700 opacity-50 border-dashed flex items-center justify-center italic text-gray-500">
-                    Next Project Loading...
-                </div>
+            <div class="glass p-8 rounded-3xl group hover:border-indigo-500/50 transition">
+                <i class="fab fa-php text-5xl text-indigo-400 mb-6 block"></i>
+                <h3
+                    class="text-xl font-bold text-white mb-2 italic underline underline-offset-8 decoration-indigo-500/30">
+                    PHP</h3>
+                <p class="text-sm text-slate-500 leading-relaxed italic">Developing dynamic web logic and secure
+                    database interactions for various web architectures.</p>
             </div>
-        </section>
-    </main>
+            <div class="glass p-8 rounded-3xl group hover:border-yellow-500/50 transition">
+                <i class="fab fa-python text-5xl text-yellow-400 mb-6 block"></i>
+                <h3
+                    class="text-xl font-bold text-white mb-2 italic underline underline-offset-8 decoration-yellow-500/30">
+                    Python</h3>
+                <p class="text-sm text-slate-500 leading-relaxed italic">Writing clean automation scripts, data
+                    processing logic, and backend frameworks.</p>
+            </div>
+        </div>
+    </section>
 
-    <footer class="py-12 text-center text-gray-600 border-t border-gray-800">
-        <p>© 2026 Kiran | Backend Developer</p>
+    <section class="py-24 px-6 max-w-5xl mx-auto">
+        <h2 class="text-sm font-black text-blue-500 uppercase tracking-[0.3em] mb-12 text-center italic">Featured Work
+        </h2>
+        <div class="glass p-12 rounded-[3rem] relative overflow-hidden group">
+            <div class="absolute top-0 right-0 p-8 text-6xl font-black text-white/5 tracking-tighter">01</div>
+            <div class="relative z-10">
+                <span
+                    class="bg-blue-500/20 text-blue-400 text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest">In
+                    Development</span>
+                <h3 class="text-4xl font-black text-white mt-4 mb-4">Task Management API</h3>
+                <p class="text-slate-400 max-w-xl text-lg leading-relaxed mb-8 italic">A robust Node.js backend system
+                    for automated task scheduling, featuring secure authentication and deep database integration.</p>
+                <a href="https://github.com/kirany2522" target="_blank"
+                    class="text-white font-bold border-b-2 border-blue-500 pb-1 hover:text-blue-500 transition-colors italic">Source
+                    Code →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center border-t border-white/5">
+        <p class="text-slate-600 text-[10px] font-black uppercase tracking-[0.5em] mb-4 italic">Kiran • Portfolio • 2026
+        </p>
+        <div class="flex justify-center space-x-6">
+            <a href="mailto:coekiran800024@gmail.com"
+                class="text-slate-400 hover:text-blue-500 transition-colors italic">Email</a>
+            <a href="https://github.com/kirany2522"
+                class="text-slate-400 hover:text-blue-500 transition-colors italic">GitHub</a>
+        </div>
     </footer>
 
 </body>
