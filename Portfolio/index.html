@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiran | Backend Architect</title>
+    <title>Kiran | Backend Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700;800&display=swap');
 
         body {
-            font-family: 'Space Grotesk', sans-serif;
-            transition: 0.5s;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            transition: 0.4s ease;
         }
 
         .resume-mode {
@@ -21,126 +21,87 @@
         }
 
         .resume-mode .glass {
-            background: #f1f5f9 !important;
-            border-color: #cbd5e1 !important;
+            background: #f8fafc !important;
+            border-color: #e2e8f0 !important;
             color: #1e293b !important;
+            box-shadow: none !important;
+        }
+
+        .resume-mode h1,
+        .resume-mode h2,
+        .resume-mode h3 {
+            color: #000 !important;
         }
 
         .glass {
-            background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .blob {
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            background: linear-gradient(to right, #3b82f6, #8b5cf6);
-            filter: blur(80px);
-            opacity: 0.15;
-            z-index: -1;
-            animation: move 20s infinite alternate;
-        }
-
-        @keyframes move {
-            from {
-                transform: translate(-10%, -10%);
-            }
-
-            to {
-                transform: translate(20%, 20%);
-            }
+        .glow:hover {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+            border-color: #3b82f6;
         }
     </style>
 </head>
 
-<body id="body" class="bg-[#050810] text-slate-400 overflow-x-hidden">
-    <div class="blob"></div>
+<body id="body" class="bg-[#0b0f1a] text-slate-300 overflow-x-hidden selection:bg-blue-500/30">
 
-    <nav class="sticky top-0 z-50 glass px-8 py-5 flex justify-between items-center">
-        <div class="text-2xl font-bold text-white tracking-tighter uppercase">Kiran<span
-                class="text-blue-500">.io</span></div>
-        <div class="flex items-center gap-6">
+    <nav class="sticky top-0 z-50 glass px-6 py-4 flex justify-between items-center">
+        <div class="text-2xl font-black text-white tracking-tighter italic">KIRAN<span class="text-blue-500">_</span>
+        </div>
+        <div class="flex items-center gap-4">
             <button onclick="toggleMode()" id="modeBtn"
-                class="border border-blue-500 text-blue-500 text-[10px] font-bold px-5 py-2 rounded-full uppercase tracking-tighter hover:bg-blue-500 hover:text-white transition-all">
-                Resume Mode
+                class="bg-white/10 hover:bg-blue-600 text-[10px] font-bold px-4 py-2 rounded-full uppercase tracking-widest text-white transition-all">
+                Switch to Resume Mode
             </button>
-            <a href="mailto:coekiran800024@gmail.com" class="text-white hover:text-blue-500 text-xl transition"><i
+            <a href="mailto:coekiran800024@gmail.com" class="text-white hover:text-blue-500 transition"><i
                     class="fas fa-paper-plane"></i></a>
         </div>
     </nav>
 
-    <header class="py-28 px-6 text-center">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="text-7xl md:text-9xl font-bold text-white mb-8 tracking-tighter">
-                EAT. <br> CODE. <br> <span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 italic">DEPLOY.</span>
+    <div id="main-content">
+        <header class="py-24 px-6 text-center">
+            <h1 class="text-7xl md:text-[10rem] font-extrabold text-white mb-6 tracking-tighter leading-none">
+                BACK<span class="text-blue-500 italic font-light">END</span>
             </h1>
-            <p class="text-xl md:text-2xl font-light mb-12 text-slate-400 max-w-2xl mx-auto leading-relaxed">
-                I am a <span class="text-white font-medium border-b-2 border-blue-500">Backend Developer</span>
-                specializing in scalable architecture using Node.js, PHP, and Python.
+            <p class="text-xl text-slate-400 mb-10 max-w-2xl mx-auto italic">
+                Developing core server logic with <span class="text-white font-bold">Node.js, PHP, & Python.</span>
             </p>
-            <div
-                class="flex justify-center gap-12 text-center uppercase tracking-widest text-[11px] font-bold text-blue-500">
-                <div><span class="block text-4xl text-white mb-2">3+</span> Languages</div>
-                <div><span class="block text-4xl text-white mb-2">10+</span> APIs Built</div>
-                <div><span class="block text-4xl text-white mb-2">99%</span> Uptime focus</div>
-            </div>
-        </div>
-    </header>
 
-    <section class="max-w-6xl mx-auto py-24 px-6">
-        <h2 class="text-4xl font-bold text-white mb-16 text-center">Engineering <span
-                class="text-blue-500">Showcase</span></h2>
-        <div class="grid md:grid-cols-2 gap-10">
-            <div class="glass p-10 rounded-[2rem] hover:-translate-y-3 transition-all duration-500 group">
-                <div class="flex justify-between mb-8">
-                    <div class="text-5xl text-blue-500 group-hover:scale-110 transition duration-500"><i
-                            class="fab fa-node-js"></i></div>
-                    <a href="https://github.com/kirany2522" target="_blank"
-                        class="w-12 h-12 rounded-full border border-slate-700 flex items-center justify-center hover:bg-white hover:text-black transition"><i
-                            class="fas fa-external-link-alt"></i></a>
-                </div>
-                <h3 class="text-3xl font-bold text-white mb-4">Task Management API</h3>
-                <p class="text-lg leading-relaxed mb-8">A high-performance backend with JWT security, MongoDB
-                    aggregation, and automated task scheduling.</p>
-                <div class="flex gap-3">
-                    <span
-                        class="text-[10px] font-bold px-3 py-1 bg-blue-500/10 rounded-full border border-blue-500/20 uppercase tracking-widest">Node.js</span>
-                    <span
-                        class="text-[10px] font-bold px-3 py-1 bg-green-500/10 rounded-full border border-green-500/20 uppercase tracking-widest">MongoDB</span>
+            <div class="flex justify-center gap-8 md:gap-16 mt-12 border-y border-white/5 py-8">
+                <div><span class="block text-3xl font-bold text-white uppercase">10+</span><span
+                        class="text-[10px] tracking-[0.3em] font-black uppercase text-blue-500">APIs Built</span></div>
+                <div><span class="block text-3xl font-bold text-white uppercase">3+</span><span
+                        class="text-[10px] tracking-[0.3em] font-black uppercase text-blue-500">Languages</span></div>
+                <div><span class="block text-3xl font-bold text-white uppercase">99%</span><span
+                        class="text-[10px] tracking-[0.3em] font-black uppercase text-blue-500">Uptime Focus</span>
                 </div>
             </div>
+        </header>
 
-            <div
-                class="glass p-10 rounded-[2rem] flex flex-col justify-center items-center text-center border-dashed border-2 border-slate-800">
-                <div class="text-slate-600 mb-6 text-4xl"><i class="fas fa-code-branch"></i></div>
-                <p class="text-slate-500 uppercase tracking-[0.4em] font-black text-xs leading-loose">Currently
-                    Building<br>Python Automation Suite</p>
+        <section class="max-w-5xl mx-auto py-12 px-6 grid md:grid-cols-3 gap-6">
+            <div class="glass p-8 rounded-3xl glow transition-all">
+                <i class="fab fa-node-js text-4xl text-blue-500 mb-6"></i>
+                <h3 class="text-xl font-bold text-white mb-2">Node.js</h3>
+                <p class="text-sm italic text-slate-500">Scalable server-side logic and Express framework.</p>
             </div>
-        </div>
-    </section>
+            <div class="glass p-8 rounded-3xl glow transition-all">
+                <i class="fab fa-php text-4xl text-indigo-400 mb-6"></i>
+                <h3 class="text-xl font-bold text-white mb-2">PHP</h3>
+                <p class="text-sm italic text-slate-500">Secure database management and legacy scripting.</p>
+            </div>
+            <div class="glass p-8 rounded-3xl glow transition-all">
+                <i class="fab fa-python text-4xl text-yellow-400 mb-6"></i>
+                <h3 class="text-xl font-bold text-white mb-2">Python</h3>
+                <p class="text-sm italic text-slate-500">Automated scrapers and backend automation.</p>
+            </div>
+        </section>
+    </div>
 
-    <section class="max-w-5xl mx-auto py-20 px-6 border-t border-slate-900">
-        <div class="grid md:grid-cols-3 gap-16">
-            <div>
-                <h4 class="text-white font-bold mb-6 text-lg tracking-widest uppercase">System Design</h4>
-                <p class="text-sm italic">Scalable API Architecture, Database Normalization, and Cloud Deployment.</p>
-            </div>
-            <div>
-                <h4 class="text-white font-bold mb-6 text-lg tracking-widest uppercase">Toolbelt</h4>
-                <p class="text-sm italic">Postman, Git/GitHub, Docker, Linux Server Management, and MySQL.</p>
-            </div>
-            <div>
-                <h4 class="text-white font-bold mb-6 text-lg tracking-widest uppercase">Mindset</h4>
-                <p class="text-sm italic">Writing clean, maintainable code with a focus on security and efficiency.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-20 text-center text-slate-600 text-[10px] font-bold uppercase tracking-[1em]">
-        Kiran // 2026 // Backend Engineer
+    <footer class="py-20 text-center border-t border-white/5">
+        <p class="text-slate-600 text-[10px] font-black uppercase tracking-[0.5em]">Kiran • 2026 • Developer</p>
     </footer>
 
     <script>
@@ -148,10 +109,13 @@
             const body = document.getElementById('body');
             const btn = document.getElementById('modeBtn');
             body.classList.toggle('resume-mode');
+
             if (body.classList.contains('resume-mode')) {
                 btn.innerText = "Switch to Portfolio Mode";
+                btn.classList.replace('bg-white/10', 'bg-black');
             } else {
                 btn.innerText = "Switch to Resume Mode";
+                btn.classList.replace('bg-black', 'bg-white/10');
             }
         }
     </script>
