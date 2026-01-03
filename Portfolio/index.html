@@ -4,123 +4,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiran | Backend Developer</title>
+    <title>Kiran | Backend Architect</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap');
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Space Grotesk', sans-serif;
+            transition: 0.5s;
+        }
+
+        .resume-mode {
+            background: #ffffff !important;
+            color: #1a202c !important;
+        }
+
+        .resume-mode .glass {
+            background: #f1f5f9 !important;
+            border-color: #cbd5e1 !important;
+            color: #1e293b !important;
         }
 
         .glass {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .hero-gradient {
-            background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+        .blob {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(to right, #3b82f6, #8b5cf6);
+            filter: blur(80px);
+            opacity: 0.15;
+            z-index: -1;
+            animation: move 20s infinite alternate;
+        }
+
+        @keyframes move {
+            from {
+                transform: translate(-10%, -10%);
+            }
+
+            to {
+                transform: translate(20%, 20%);
+            }
         }
     </style>
 </head>
 
-<body class="bg-[#0b0f1a] text-slate-300 selection:bg-blue-500/30">
+<body id="body" class="bg-[#050810] text-slate-400 overflow-x-hidden">
+    <div class="blob"></div>
 
-    <nav class="sticky top-0 z-50 glass px-6 py-4">
-        <div class="max-w-5xl mx-auto flex justify-between items-center">
-            <div class="text-2xl font-black text-white tracking-tighter italic">KIRAN<span
-                    class="text-blue-500">_</span></div>
-            <div class="flex space-x-6 text-sm font-bold uppercase tracking-widest">
-                <a href="https://github.com/kirany2522" target="_blank"
-                    class="hover:text-blue-400 transition-colors">GitHub</a>
-                <a href="mailto:coekiran800024@gmail.com"
-                    class="text-blue-500 hover:text-white transition-colors underline decoration-2 underline-offset-4">Hire
-                    Me</a>
-            </div>
+    <nav class="sticky top-0 z-50 glass px-8 py-5 flex justify-between items-center">
+        <div class="text-2xl font-bold text-white tracking-tighter uppercase">Kiran<span
+                class="text-blue-500">.io</span></div>
+        <div class="flex items-center gap-6">
+            <button onclick="toggleMode()" id="modeBtn"
+                class="border border-blue-500 text-blue-500 text-[10px] font-bold px-5 py-2 rounded-full uppercase tracking-tighter hover:bg-blue-500 hover:text-white transition-all">
+                Resume Mode
+            </button>
+            <a href="mailto:coekiran800024@gmail.com" class="text-white hover:text-blue-500 text-xl transition"><i
+                    class="fas fa-paper-plane"></i></a>
         </div>
     </nav>
 
-    <header class="relative py-32 px-6 text-center hero-gradient">
+    <header class="py-28 px-6 text-center">
         <div class="max-w-4xl mx-auto">
-            <h1 class="text-7xl md:text-9xl font-extrabold text-white mb-6 tracking-tighter">
-                BACK<span class="text-blue-500 font-light italic">END</span>
+            <h1 class="text-7xl md:text-9xl font-bold text-white mb-8 tracking-tighter">
+                EAT. <br> CODE. <br> <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 italic">DEPLOY.</span>
             </h1>
-            <p class="text-2xl text-slate-400 font-light mb-10 max-w-2xl mx-auto leading-relaxed">
-                Building the core of web applications with <span class="text-white font-semibold">Node.js</span>, <span
-                    class="text-white font-semibold">PHP</span>, and <span
-                    class="text-white font-semibold">Python</span>.
+            <p class="text-xl md:text-2xl font-light mb-12 text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                I am a <span class="text-white font-medium border-b-2 border-blue-500">Backend Developer</span>
+                specializing in scalable architecture using Node.js, PHP, and Python.
             </p>
-            <div class="flex justify-center space-x-4">
-                <a href="mailto:coekiran800024@gmail.com"
-                    class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full font-bold transition-all shadow-lg shadow-blue-500/20">Let's
-                    Talk</a>
+            <div
+                class="flex justify-center gap-12 text-center uppercase tracking-widest text-[11px] font-bold text-blue-500">
+                <div><span class="block text-4xl text-white mb-2">3+</span> Languages</div>
+                <div><span class="block text-4xl text-white mb-2">10+</span> APIs Built</div>
+                <div><span class="block text-4xl text-white mb-2">99%</span> Uptime focus</div>
             </div>
         </div>
     </header>
 
-    <section class="py-24 px-6 max-w-5xl mx-auto">
-        <h2 class="text-sm font-black text-blue-500 uppercase tracking-[0.3em] mb-12 text-center italic">Technical
-            Arsenal</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="glass p-8 rounded-3xl group hover:border-blue-500/50 transition">
-                <i class="fab fa-node-js text-5xl text-blue-500 mb-6 block"></i>
-                <h3
-                    class="text-xl font-bold text-white mb-2 italic underline underline-offset-8 decoration-blue-500/30">
-                    Node.js</h3>
-                <p class="text-sm text-slate-500 leading-relaxed italic">Fast, scalable server-side environments using
-                    Express.js and real-time processing.</p>
+    <section class="max-w-6xl mx-auto py-24 px-6">
+        <h2 class="text-4xl font-bold text-white mb-16 text-center">Engineering <span
+                class="text-blue-500">Showcase</span></h2>
+        <div class="grid md:grid-cols-2 gap-10">
+            <div class="glass p-10 rounded-[2rem] hover:-translate-y-3 transition-all duration-500 group">
+                <div class="flex justify-between mb-8">
+                    <div class="text-5xl text-blue-500 group-hover:scale-110 transition duration-500"><i
+                            class="fab fa-node-js"></i></div>
+                    <a href="https://github.com/kirany2522" target="_blank"
+                        class="w-12 h-12 rounded-full border border-slate-700 flex items-center justify-center hover:bg-white hover:text-black transition"><i
+                            class="fas fa-external-link-alt"></i></a>
+                </div>
+                <h3 class="text-3xl font-bold text-white mb-4">Task Management API</h3>
+                <p class="text-lg leading-relaxed mb-8">A high-performance backend with JWT security, MongoDB
+                    aggregation, and automated task scheduling.</p>
+                <div class="flex gap-3">
+                    <span
+                        class="text-[10px] font-bold px-3 py-1 bg-blue-500/10 rounded-full border border-blue-500/20 uppercase tracking-widest">Node.js</span>
+                    <span
+                        class="text-[10px] font-bold px-3 py-1 bg-green-500/10 rounded-full border border-green-500/20 uppercase tracking-widest">MongoDB</span>
+                </div>
             </div>
-            <div class="glass p-8 rounded-3xl group hover:border-indigo-500/50 transition">
-                <i class="fab fa-php text-5xl text-indigo-400 mb-6 block"></i>
-                <h3
-                    class="text-xl font-bold text-white mb-2 italic underline underline-offset-8 decoration-indigo-500/30">
-                    PHP</h3>
-                <p class="text-sm text-slate-500 leading-relaxed italic">Developing dynamic web logic and secure
-                    database interactions for various web architectures.</p>
-            </div>
-            <div class="glass p-8 rounded-3xl group hover:border-yellow-500/50 transition">
-                <i class="fab fa-python text-5xl text-yellow-400 mb-6 block"></i>
-                <h3
-                    class="text-xl font-bold text-white mb-2 italic underline underline-offset-8 decoration-yellow-500/30">
-                    Python</h3>
-                <p class="text-sm text-slate-500 leading-relaxed italic">Writing clean automation scripts, data
-                    processing logic, and backend frameworks.</p>
+
+            <div
+                class="glass p-10 rounded-[2rem] flex flex-col justify-center items-center text-center border-dashed border-2 border-slate-800">
+                <div class="text-slate-600 mb-6 text-4xl"><i class="fas fa-code-branch"></i></div>
+                <p class="text-slate-500 uppercase tracking-[0.4em] font-black text-xs leading-loose">Currently
+                    Building<br>Python Automation Suite</p>
             </div>
         </div>
     </section>
 
-    <section class="py-24 px-6 max-w-5xl mx-auto">
-        <h2 class="text-sm font-black text-blue-500 uppercase tracking-[0.3em] mb-12 text-center italic">Featured Work
-        </h2>
-        <div class="glass p-12 rounded-[3rem] relative overflow-hidden group">
-            <div class="absolute top-0 right-0 p-8 text-6xl font-black text-white/5 tracking-tighter">01</div>
-            <div class="relative z-10">
-                <span
-                    class="bg-blue-500/20 text-blue-400 text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest">In
-                    Development</span>
-                <h3 class="text-4xl font-black text-white mt-4 mb-4">Task Management API</h3>
-                <p class="text-slate-400 max-w-xl text-lg leading-relaxed mb-8 italic">A robust Node.js backend system
-                    for automated task scheduling, featuring secure authentication and deep database integration.</p>
-                <a href="https://github.com/kirany2522" target="_blank"
-                    class="text-white font-bold border-b-2 border-blue-500 pb-1 hover:text-blue-500 transition-colors italic">Source
-                    Code →</a>
+    <section class="max-w-5xl mx-auto py-20 px-6 border-t border-slate-900">
+        <div class="grid md:grid-cols-3 gap-16">
+            <div>
+                <h4 class="text-white font-bold mb-6 text-lg tracking-widest uppercase">System Design</h4>
+                <p class="text-sm italic">Scalable API Architecture, Database Normalization, and Cloud Deployment.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 text-lg tracking-widest uppercase">Toolbelt</h4>
+                <p class="text-sm italic">Postman, Git/GitHub, Docker, Linux Server Management, and MySQL.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 text-lg tracking-widest uppercase">Mindset</h4>
+                <p class="text-sm italic">Writing clean, maintainable code with a focus on security and efficiency.</p>
             </div>
         </div>
     </section>
 
-    <footer class="py-20 text-center border-t border-white/5">
-        <p class="text-slate-600 text-[10px] font-black uppercase tracking-[0.5em] mb-4 italic">Kiran • Portfolio • 2026
-        </p>
-        <div class="flex justify-center space-x-6">
-            <a href="mailto:coekiran800024@gmail.com"
-                class="text-slate-400 hover:text-blue-500 transition-colors italic">Email</a>
-            <a href="https://github.com/kirany2522"
-                class="text-slate-400 hover:text-blue-500 transition-colors italic">GitHub</a>
-        </div>
+    <footer class="py-20 text-center text-slate-600 text-[10px] font-bold uppercase tracking-[1em]">
+        Kiran // 2026 // Backend Engineer
     </footer>
 
+    <script>
+        function toggleMode() {
+            const body = document.getElementById('body');
+            const btn = document.getElementById('modeBtn');
+            body.classList.toggle('resume-mode');
+            if (body.classList.contains('resume-mode')) {
+                btn.innerText = "Switch to Portfolio Mode";
+            } else {
+                btn.innerText = "Switch to Resume Mode";
+            }
+        }
+    </script>
 </body>
 
 </html>
