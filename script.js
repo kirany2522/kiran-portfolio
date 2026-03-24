@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   syncNavbar();
+  
   window.addEventListener("scroll", syncNavbar, { passive: true });
 
   menuToggle?.addEventListener("click", () => {
